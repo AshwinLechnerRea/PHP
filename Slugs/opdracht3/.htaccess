@@ -1,0 +1,16 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+
+RewriteRule ^numbers/?$ table [PT]
+
+RewriteCond %{HTTP_USER_AGENT} .*Trident.* [NC]
+RewriteRule .* - [F,L]
+
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://(www.)?yourwebdomain.com(/)?.*$ [NC]
+RewriteRule .*.(gif|jpe?g)$ [F,NC]

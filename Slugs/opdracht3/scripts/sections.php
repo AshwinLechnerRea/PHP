@@ -26,7 +26,7 @@
 			<nav>
 				<?php postMenu(); ?>
 			</nav>
-			<h1><a href="index.php">Webshop voor katten</a></h1>
+			<h1><a href="index">Webshop voor katten</a></h1>
 			<div id="socialmedia">
 				<a id="facebook" alt="facebook" href="https://www.facebook.com" target="_blank"></a>
 				<a id="twitter" alt="twitter" href="https://www.twitter.com" target="_blank"></a>
@@ -40,10 +40,10 @@
 
 	function postMenu() {
 		
-		$menu = array('home' => 'index.php',
-					   'table' => 'table.php',
-					   'contact' => 'contact.php',
-					   'products' => 'products.php');
+		$menu = array('home' => 'index',
+					   'table' => 'table',
+					   'contact' => 'contact',
+					   'products' => 'products');
 					   
 		$buttonWidth = (1000 / count($menu) - 10);
 		echo '<ul class="nav-list">';
