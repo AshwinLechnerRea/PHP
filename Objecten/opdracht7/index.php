@@ -1,5 +1,6 @@
 <?php
 require_once('classes/User.php');
+require_once('includes/functions.php');
 $user1 = new User('Ashwin', 'Hallo123', 'ashwin.lechner@gmail.com', 30, true);
 $user2 = new User('Remo', 'Vaarwel123', 'remo@gmail.com', 29, false);
 ?>
