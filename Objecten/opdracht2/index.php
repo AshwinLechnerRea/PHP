@@ -17,11 +17,11 @@ $product1->setPrice(0.39);
 <body>
     <h2>Productinformatie</h2>
     <p>
-        <?php echo 'Het product '. $product1->getName() .' kost ' . $product1->getPrice() .' per stuk' ?>
+        <?php echo 'Het product ' . $product1->getName() . ' kost ' . $product1->getPrice() . ' per stuk' ?>
     </p>
     <h2>Totaalbedrag</h2>
     <p>
-        <?= $product1->calculateCosts(12)?>
+        <?= $product1->calculateCosts(12) ?>
     </p>
 </body>
 

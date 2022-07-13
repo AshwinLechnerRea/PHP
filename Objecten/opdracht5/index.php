@@ -13,18 +13,18 @@ require_once('classes/Validator.php')
 
 <body>
     <?php
-    if(Validator::validateEmail('ashwin.lechner@gmail.com')){
-   echo 'correct e-mail';
-    }else{
+    if (Validator::validateEmail('ashwin.lechner@gmail.com')) {
+        echo 'correct e-mail';
+    } else {
         echo 'Incorrect e-mail';
     }
     echo '<br>';
-    if(Validator::validateEmail('ashwin.lechner.gmail.com')){
+    if (Validator::validateEmail('ashwin.lechner.gmail.com')) {
         echo 'Valid e-mail';
-    }else{
+    } else {
         echo 'Invalid e-mail';
     }
- 
+
     Validator::validateEmail('hello');
     ?>
 </body>

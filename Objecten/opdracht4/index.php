@@ -15,10 +15,10 @@ $mareep3 = new Mareep(10);
 </head>
 
 <body>
-    <p> <?=$mareep1->tackle()?></p>
-    <p> <?=$mareep2->tackle()?></p>
-    <p><?=$mareep3->tackle()?></p>
-    <p><?=$mareep3->groupAttack()?></p>
+    <p> <?= $mareep1->tackle() ?></p>
+    <p> <?= $mareep2->tackle() ?></p>
+    <p><?= $mareep3->tackle() ?></p>
+    <p><?= $mareep3->groupAttack() ?></p>
 </body>
 
 </html>

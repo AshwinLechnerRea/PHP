@@ -1,11 +1,15 @@
 <?php
-class Validator{
-public static function validateEmail(string $email){
-    if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
-     return true;
+class Validator
+{
+    public static function validateEmail(string $email)
+    {
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return true;
+        } else {
+            return false;
+        }
     }
-    else {
-        return false;
+    public static function validateLinkedIn(string $link)
+    {
     }
-}
 }

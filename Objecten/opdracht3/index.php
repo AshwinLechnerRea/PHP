@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once('classes/Dice.php');
 $dice1 = new Dice();
 $d20 = new Dice(20);
@@ -15,11 +15,11 @@ $d20 = new Dice(20);
 
 <body>
     <h2>Normal dice</h2>
-    <p>You rolled a <?=$dice1->roll()?></p>
+    <p>You rolled a <?= $dice1->roll() ?></p>
     <h2>D20 </h2>
-    <P>You rolled <?=$d20->roll()?></P>
-    <P>You rolled <?=$d20->roll()?></P>
-    <P>You rolled <?=$d20->roll()?></P>
+    <P>You rolled <?= $d20->roll() ?></P>
+    <P>You rolled <?= $d20->roll() ?></P>
+    <P>You rolled <?= $d20->roll() ?></P>
 </body>
 
 </html>
