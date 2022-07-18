@@ -3,16 +3,13 @@ abstract class Figure
 {
     protected int $x;
     protected int $y;
-    protected int $height;
-    protected int $width;
     protected string $color;
 
-    public function __construct(int $x, int $y,  int $width, int $height, string $color)
+    public function __construct(int $x, int $y, string $color)
     {
         $this->x = $x;
         $this->y = $y;
-        $this->width = $width;
-        $this->height = $height;
+
         $this->color = $color;
     }
 }
@@ -46,7 +43,17 @@ class Drwaing implements Drawable
     }
 }
 class Rectangle extends Figure
+
 {
+    private int $width;
+    private int $height;
+    public function __construct(int $x, int $y, int $width, int $height, string $color)
+    {
+        parent::__construct($x, $y, $color);
+        $this->width = $width;
+        $this->height = $height;
+    }
+
     function draw()
     {
         echo '<rect x="' . $this->x . '" y="' . $this->y . '" width="' . $this->width . '" height="' . $this->height . '" fill="' . $this->color . '"></rect>';
@@ -54,8 +61,16 @@ class Rectangle extends Figure
 }
 class Ellipse extends Figure
 {
+    private int $rx;
+    private int $ry;
+    public function __construct(int $x, int $y, int $rx, int $ry, string $color)
+    {
+        parent::__construct($x, $y, $color);
+        $this->rx = $rx;
+        $this->ry = $ry;
+    }
     public function draw()
     {
-        echo '  <ellipse cx="100" cy="50" rx="100" ry="50" />';
+        echo '  <ellipse cx="' . $this->x . '" cy="' . $this->y . '" rx="' . $this->rx . '" ry="' . $this->ry . '" fill="' . $this->color . '" />';
     }
 }
