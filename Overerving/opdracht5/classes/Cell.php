@@ -1,7 +1,7 @@
 <?php
 class Cell
 {
-	private string $content;
+	protected string $content;
 
 	public function __construct(string $content)
 	{
@@ -15,13 +15,6 @@ class Cell
 }
 class StrongCell extends Cell
 {
-	private string $content;
-
-	public function __construct(string $content)
-	{
-		$this->content = $content;
-	}
-
 	public function draw()
 	{
 		echo '<td><strong>' . $this->content . '</strong></td>';
@@ -29,12 +22,6 @@ class StrongCell extends Cell
 }
 class UnderlineCell extends Cell
 {
-	private string $content;
-
-	public function __construct(string $content)
-	{
-		$this->content = $content;
-	}
 
 	public function draw()
 	{
@@ -43,13 +30,6 @@ class UnderlineCell extends Cell
 }
 class StrikethroughCell extends Cell
 {
-	private string $content;
-
-	public function __construct(string $content)
-	{
-		$this->content = $content;
-	}
-
 	public function draw()
 	{
 		echo '<td><s>' . $this->content . '</s></td>';
@@ -57,12 +37,6 @@ class StrikethroughCell extends Cell
 }
 class EmphasisCell extends Cell
 {
-	private string $content;
-
-	public function __construct(string $content)
-	{
-		$this->content = $content;
-	}
 
 	public function draw()
 	{
